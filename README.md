@@ -92,14 +92,20 @@ Type "yes" when asked.
 
 Files Not to Push to GitHub
 
-These files should remain private:
+## These files should remain private:
 
 demo-key.pem
+
 terraform.tfstate
+
 .terraform
+
 .terraform.lock.hcl
+
 aws
+
 awscliv2.zip
+
 
 
 
