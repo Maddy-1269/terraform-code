@@ -1,4 +1,4 @@
-**Terraform – AWS EC2 Deployment (Ubuntu)
+# Terraform – AWS EC2 Deployment (Ubuntu)
 
 This project uses Terraform to:
 
@@ -12,9 +12,9 @@ Use Default VPC and Subnet
 
 Auto-assign Public IP
 
-Prerequisites
+# Prerequisites
 
-Ensure the following tools are installed on your system:
+## Ensure the following tools are installed on your system:
 
 Tool	Check Version
 Terraform	terraform -version
@@ -26,20 +26,16 @@ Create an IAM User in AWS
 Attach policy: AdministratorAccess
 Download Access Key and Secret Key
 
-Configure AWS credentials:
+# Configure AWS credentials:
 
 aws configure
-
-
-Enter:
 
 AWS Access Key ID: your_key
 AWS Secret Access Key: your_secret
 Default region name: ap-south-1
 Default output format: json
 
-
-Verify the credentials:
+# Verify the credentials:
 
 aws sts get-caller-identity
 
@@ -51,22 +47,19 @@ outputs.tf
 .gitignore
 demo-key.pem (generated automatically after terraform apply)
 
-How to Run Terraform
+## How to Run Terraform
 
 Initialize Terraform:
 
 terraform init
 
-
 Preview the execution plan:
 
 terraform plan
 
-
-Apply the configuration:
+## Apply the configuration:
 
 terraform apply
-
 
 Type "yes" when prompted.
 
@@ -75,7 +68,6 @@ Connect to EC2 Instance
 Get the EC2 Public IP:
 
 terraform output instance_public_ip
-
 
 Connect using SSH:
 
@@ -87,7 +79,6 @@ Destroy EC2 Resources
 To remove the infrastructure:
 
 terraform destroy
-
 
 Type "yes" when asked.
 
@@ -102,3 +93,4 @@ terraform.tfstate
 aws/
 
 awscliv2.zip
+
