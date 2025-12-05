@@ -1,4 +1,4 @@
-Terraform – AWS EC2 Deployment (Ubuntu)
+**Terraform – AWS EC2 Deployment (Ubuntu)
 
 This project uses Terraform to:
 
@@ -100,4 +100,5 @@ terraform.tfstate
 .terraform/
 .terraform.lock.hcl
 aws/
+
 awscliv2.zip
