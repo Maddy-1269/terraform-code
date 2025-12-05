@@ -82,9 +82,9 @@ Connect using SSH:
 chmod 400 demo-key.pem
 ssh -i demo-key.pem ubuntu@<PUBLIC_IP>
 
-## Destroy EC2 Resources
+# Destroy EC2 Resources
 
-To remove the infrastructure:
+## To remove the infrastructure:
 
 terraform destroy
 
@@ -99,8 +99,8 @@ terraform.tfstate
 .terraform/
 .terraform.lock.hcl
 aws/
-
 awscliv2.zip
+
 
 
 
