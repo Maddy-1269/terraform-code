@@ -44,10 +44,15 @@ aws sts get-caller-identity
 
 Project Structure
 terraform-demo/
+
 main.tf
+
 variables.tf
+
 outputs.tf
+
 .gitignore
+
 demo-key.pem (generated automatically after terraform apply)
 
 ## How to Run Terraform
@@ -96,6 +101,7 @@ terraform.tfstate
 aws/
 
 awscliv2.zip
+
 
 
 
