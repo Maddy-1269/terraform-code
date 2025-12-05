@@ -96,10 +96,11 @@ These files should remain private:
 
 demo-key.pem
 terraform.tfstate
-.terraform/
+.terraform
 .terraform.lock.hcl
-aws/
+aws
 awscliv2.zip
+
 
 
 
