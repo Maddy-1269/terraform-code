@@ -1,30 +1,32 @@
- Terraform - AWS EC2 Deployment (Ubuntu)
+Terraform – AWS EC2 Deployment (Ubuntu)
 
-This project uses Terraform to automatically:
+This project uses Terraform to:
 
 Generate SSH Key Pair (.pem)
 
-Create a Security Group (Allow SSH)
+Create a Security Group allowing SSH
 
-Launch an EC2 Instance (Ubuntu - Free Tier Eligible)
+Launch an EC2 instance (Ubuntu - Free Tier eligible)
 
-Use Default VPC & Subnets
+Use Default VPC and Subnet
 
 Auto-assign Public IP
 
- Prerequisites
+Prerequisites
 
-Make sure the below tools are installed:
+Ensure the following tools are installed on your system:
 
-Tool	Check version
+Tool	Check Version
 Terraform	terraform -version
 AWS CLI	aws --version
 unzip (Ubuntu)	sudo apt install unzip -y
- AWS CLI Setup (Required)
+AWS CLI Setup (Required)
 
-Create an IAM user in AWS → Attach AdministratorAccess → Download Access Key & Secret Key.
+Create an IAM User in AWS
+Attach policy: AdministratorAccess
+Download Access Key and Secret Key
 
-Configure AWS credentials in Ubuntu:
+Configure AWS credentials:
 
 aws configure
 
@@ -37,60 +39,65 @@ Default region name: ap-south-1
 Default output format: json
 
 
-To verify:
+Verify the credentials:
 
 aws sts get-caller-identity
 
- Project Structure
+Project Structure
 terraform-demo/
-│-- main.tf
-│-- variables.tf
-│-- outputs.tf
-│-- .gitignore
-│-- demo-key.pem (auto created)
+main.tf
+variables.tf
+outputs.tf
+.gitignore
+demo-key.pem (generated automatically after terraform apply)
 
- How to Run Terraform
-Step 1 — Initialize Terraform
+How to Run Terraform
+
+Initialize Terraform:
+
 terraform init
 
-Step 2 — Preview changes (Optional)
+
+Preview the execution plan:
+
 terraform plan
 
-Step 3 — Apply the changes
+
+Apply the configuration:
+
 terraform apply
 
 
-Type yes when asked.
+Type "yes" when prompted.
 
-Step 4 — Connect to EC2
+Connect to EC2 Instance
 
-Get public IP:
+Get the EC2 Public IP:
 
 terraform output instance_public_ip
 
 
-Connect:
+Connect using SSH:
 
 chmod 400 demo-key.pem
 ssh -i demo-key.pem ubuntu@<PUBLIC_IP>
 
- Destroy EC2 Instance
+Destroy EC2 Resources
 
-To remove everything created by Terraform:
+To remove the infrastructure:
 
 terraform destroy
 
 
-Type yes
+Type "yes" when asked.
 
- Files NOT to Push to GitHub
+Files Not to Push to GitHub
 
-The following files should stay private:
+These files should remain private:
 
 demo-key.pem
-
 terraform.tfstate
-
 .terraform/
-
-These are added in .gitignore.
+.terraform.lock.hcl
+aws/
+awscliv2.zip
