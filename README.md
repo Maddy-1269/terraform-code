@@ -31,8 +31,11 @@ Download Access Key and Secret Key
 aws configure
 
 AWS Access Key ID: your_key
+
 AWS Secret Access Key: your_secret
+
 Default region name: ap-south-1
+
 Default output format: json
 
 # Verify the credentials:
@@ -93,5 +96,6 @@ terraform.tfstate
 aws/
 
 awscliv2.zip
+
 
 
