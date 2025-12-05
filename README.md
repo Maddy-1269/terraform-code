@@ -6,7 +6,7 @@ Generate SSH Key Pair (.pem)
 
 Create a Security Group allowing SSH
 
-Launch an EC2 instance (Ubuntu - Free Tier eligible)
+Launch an EC2 instance
 
 Use Default VPC and Subnet
 
@@ -53,7 +53,7 @@ outputs.tf
 
 .gitignore
 
-demo-key.pem (generated automatically after terraform apply)
+demo-key.pem
 
 ## How to Run Terraform
 
@@ -105,6 +105,7 @@ terraform.tfstate
 aws
 
 awscliv2.zip
+
 
 
 
